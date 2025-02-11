@@ -37,7 +37,9 @@ print("\nAutovetores:")
 print(eigenvectors)
 
 # Ordenar os autovalores e autovetores em ordem decrescente
-eigen_pairs = [(np.abs(eigenvalues[i]), eigenvectors[:, i]) for i in range(len(eigenvalues))]
+eigen_pairs = [(np.abs(eigenvalues[i]), eigenvectors[:, i]) 
+               for i in range(len(eigenvalues))
+              ]
 eigen_pairs.sort(key=lambda x: x[0], reverse=True)
 
 # Selecionar os dois maiores autovalores e autovetores
